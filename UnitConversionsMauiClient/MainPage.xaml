@@ -9,31 +9,48 @@
             Padding="30,0"
             VerticalOptions="Center">
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
-
             <Label
-                Text="Hello, World!"
+                Text="Value to convert:"
                 SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
+                FontSize="24"
                 HorizontalOptions="Center" />
 
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
+            <Entry
+                x:Name="ValueToConvert"
+                Text="" 
+                Keyboard="Numeric"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="24"
+                HorizontalOptions="Center">
+            </Entry>
+            
+             <Picker
+                x:Name="ConversionType"
+                Title="Select unit conversion type"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="24"
                 HorizontalOptions="Center" />
 
             <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
+                x:Name="ConvertBtn"
+                Text="Convert"
+                Clicked="OnConvertClicked"
                 HorizontalOptions="Center" />
+
+            <Label
+                Text="Converted value:"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="24"
+                HorizontalOptions="Center" />
+
+            <Entry
+                x:Name="ConvertedValue"
+                Text="" 
+                IsReadOnly="True"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="24"
+                HorizontalOptions="Center">
+            </Entry>
 
         </VerticalStackLayout>
     </ScrollView>
