@@ -4,55 +4,57 @@
              x:Class="UnitConversionsMauiClient.MainPage">
 
     <ScrollView>
-        <VerticalStackLayout
+        <Frame BorderColor="Blue" Padding="0" Margin="60" BackgroundColor="#00000000">
+            <VerticalStackLayout
             Spacing="25"
             Padding="30,0"
             VerticalOptions="Center">
 
-            <Label
+                <Label
                 Text="Value to convert:"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="24"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center" Margin="0,0,0,-20" />
 
-            <Entry
+                <Entry
                 x:Name="ValueToConvert"
                 Text="" 
                 Keyboard="Numeric"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="24"
                 HorizontalOptions="Center">
-            </Entry>
-            
-             <Picker
+                </Entry>
+
+                <Picker
                 x:Name="ConversionType"
                 Title="Select unit conversion type"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="24"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center" Margin="0,0,0,20" />
 
-            <Button
+                <Button
                 x:Name="ConvertBtn"
                 Text="Convert"
                 Clicked="OnConvertClicked"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center" Margin="0,0,0,20" />
 
-            <Label
+                <Label
                 Text="Converted value:"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="24"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center" Margin="0,0,0,-20" />
 
-            <Entry
+                <Entry
                 x:Name="ConvertedValue"
                 Text="" 
                 IsReadOnly="True"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="24"
                 HorizontalOptions="Center">
-            </Entry>
+                </Entry>
 
-        </VerticalStackLayout>
+            </VerticalStackLayout>
+        </Frame>
     </ScrollView>
 
 </ContentPage>
