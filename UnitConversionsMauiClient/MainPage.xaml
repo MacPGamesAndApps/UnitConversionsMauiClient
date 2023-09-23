@@ -4,7 +4,7 @@
              x:Class="UnitConversionsMauiClient.MainPage">
 
     <ScrollView>
-        <Frame BorderColor="Blue" Padding="0" Margin="60" BackgroundColor="#00000000">
+        <Frame BorderColor="Blue" Padding="0" Margin="30" BackgroundColor="#00000000">
             <VerticalStackLayout
             Spacing="25"
             Padding="30,0"
@@ -13,15 +13,19 @@
                 <Label
                 Text="Value to convert:"
                 SemanticProperties.HeadingLevel="Level1"
-                FontSize="24"
-                HorizontalOptions="Center" Margin="0,0,0,-20" />
+                FontSize="18"
+                FontAutoScalingEnabled="True"
+                HorizontalOptions="Center" 
+                Margin="0,0,0,-20" />
 
                 <Entry
                 x:Name="ValueToConvert"
-                Text="" 
-                Keyboard="Numeric"
+                Text=""
+                Placeholder="Enter a number"
                 SemanticProperties.HeadingLevel="Level1"
-                FontSize="24"
+                FontSize="18"
+                FontAutoScalingEnabled="True"
+                HorizontalTextAlignment="Center"
                 HorizontalOptions="Center">
                 </Entry>
 
@@ -29,27 +33,35 @@
                 x:Name="ConversionType"
                 Title="Select unit conversion type"
                 SemanticProperties.HeadingLevel="Level1"
-                FontSize="24"
-                HorizontalOptions="Center" Margin="0,0,0,20" />
+                FontSize="18"
+                FontAutoScalingEnabled="True"
+                HorizontalTextAlignment="Center"
+                HorizontalOptions="Center" 
+                Margin="0,0,0,20" />
 
                 <Button
                 x:Name="ConvertBtn"
                 Text="Convert"
                 Clicked="OnConvertClicked"
-                HorizontalOptions="Center" Margin="0,0,0,20" />
+                FontAutoScalingEnabled="True"
+                HorizontalOptions="Center" 
+                Margin="0,0,0,20" />
 
                 <Label
                 Text="Converted value:"
                 SemanticProperties.HeadingLevel="Level1"
-                FontSize="24"
-                HorizontalOptions="Center" Margin="0,0,0,-20" />
+                FontSize="18"
+                FontAutoScalingEnabled="True"
+                HorizontalOptions="Center" 
+                Margin="0,0,0,-20" />
 
                 <Entry
                 x:Name="ConvertedValue"
                 Text="" 
                 IsReadOnly="True"
                 SemanticProperties.HeadingLevel="Level1"
-                FontSize="24"
+                FontSize="18"
+                FontAutoScalingEnabled="True"
                 HorizontalOptions="Center">
                 </Entry>
 
