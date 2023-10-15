@@ -9,8 +9,10 @@
 
         public static class ConversionServiceEndPoints
         {
-            public static readonly string DEV_UNIT_CONVERSION_ENDPOINT = "http://localhost:60937/";
-            public static readonly string PROD_UNIT_CONVERSION_ENDPOINT = "https://macpunitconversionsmicroservice.azurewebsites.net/";
+            public static readonly string DEV_UNIT_CONVERSION_ENDPOINT = "http://localhost:60937/api/unitconversions/";
+            public static readonly string PROD_UNIT_CONVERSION_ENDPOINT = "https://macpunitconversionsmicroservice.azurewebsites.net/api/unitconversions/";
+            public static readonly string DEV_BASE_CONVERSION_ENDPOINT = "http://localhost:60947/api/baseconversions/";
+            public static readonly string PROD_BASE_CONVERSION_ENDPOINT = "https://macpbaseconversionsmicroservice.azurewebsites.net/api/baseconversions/";
         }
     }
 }

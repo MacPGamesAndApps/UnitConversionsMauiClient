@@ -358,6 +358,11 @@
         <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Yellow300Accent}, Dark={StaticResource Black}}" />
     </Style>
 
+    <Style TargetType="Page" Class="BaseConversions" ApplyToDerivedTypes="True">
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Red300Accent}, Dark={StaticResource Black}}" />
+    </Style>
+
     <Style TargetType="Shell" ApplyToDerivedTypes="True">
         <Setter Property="Shell.BackgroundColor" Value="{AppThemeBinding Light={StaticResource Blue100Accent}, Dark={StaticResource Gray950}}" />
         <Setter Property="Shell.ForegroundColor" Value="{OnPlatform WinUI={StaticResource Primary}, Default={StaticResource White}}" />
@@ -382,6 +387,11 @@
         <Setter Property="BarTextColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />
         <Setter Property="UnselectedTabColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray950}}" />
         <Setter Property="SelectedTabColor" Value="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray200}}" />
+    </Style>
+
+    <Style TargetType="Button" Class="NavigationButton">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="CornerRadius" Value="24" />
     </Style>
 
 </ResourceDictionary>

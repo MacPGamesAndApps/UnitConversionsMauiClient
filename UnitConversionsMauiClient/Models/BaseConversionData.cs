@@ -1,8 +1,8 @@
 ﻿namespace UnitConversionsMauiClient.Models
 {
-    internal class ConversionTypeInfo
+    internal class BaseConversionData
     {
+        public string ValueFrom { get; set; }
         public byte ConversionType { get; set; }
-        public string ConversionName { get; set; }
     }
 }
