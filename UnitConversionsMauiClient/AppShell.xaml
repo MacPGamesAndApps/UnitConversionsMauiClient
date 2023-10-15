@@ -8,7 +8,11 @@
 
     <ShellContent
         Title="Unit Conversions MAUI Client"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        ContentTemplate="{DataTemplate local:UnitConversionsPage}"
+        Route="UnitConversionsPage" />
+    <ShellContent
+        Title="Base Conversions MAUI Client"
+        ContentTemplate="{DataTemplate local:BaseConversionsPage}"
+        Route="BaseConversionsPage" />
 
 </Shell>

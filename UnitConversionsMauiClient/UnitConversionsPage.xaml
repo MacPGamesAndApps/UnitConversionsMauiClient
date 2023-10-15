@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="UnitConversionsMauiClient.MainPage">
+             x:Class="UnitConversionsMauiClient.UnitConversionsPage">
 
     <ScrollView>
         <Frame BorderColor="Blue" Padding="0" Margin="30" BackgroundColor="#00000000">
@@ -64,6 +64,22 @@
                 FontAutoScalingEnabled="True"
                 HorizontalOptions="Center">
                 </Entry>
+
+                <Button
+                x:Name="NavigationBtn"
+                Text="Go to Base Conversions"
+                Clicked="OnNavigationClicked"
+                FontAutoScalingEnabled="True"
+                HorizontalOptions="End" 
+                StyleClass="NavigationButton"
+                Margin="0,0,0,20" >
+                    <Button.Background>
+                        <LinearGradientBrush  EndPoint="1,0">
+                            <GradientStop Color="PaleTurquoise" Offset="0.1" />
+                            <GradientStop Color="SeaShell" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
 
             </VerticalStackLayout>
         </Frame>

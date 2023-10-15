@@ -28,6 +28,72 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+		<Title>MacP's Conversions Maui Client</Title>
+		<AndroidSigningKeyStore>MacPGames.keystore</AndroidSigningKeyStore>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0-android|AnyCPU'">
+	  <ApplicationId>com.macpgames.macpconversionsmauiclient</ApplicationId>
+	  <ApplicationDisplayVersion>2.0.0</ApplicationDisplayVersion>
+	  <ApplicationVersion>2</ApplicationVersion>
+	  <ApplicationTitle>MacPConversionsMauiClient</ApplicationTitle>
+	  <AndroidKeyStore>True</AndroidKeyStore>
+	  <AndroidSigningStorePass>Jessica19681208</AndroidSigningStorePass>
+	  <AndroidSigningKeyAlias>macpgames</AndroidSigningKeyAlias>
+	  <AndroidSigningKeyPass>Jessica19681208</AndroidSigningKeyPass>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0-ios|AnyCPU'">
+	  <ApplicationId>com.macpgames.macpconversionsmauiclient</ApplicationId>
+	  <ApplicationDisplayVersion>2.0.0</ApplicationDisplayVersion>
+	  <ApplicationVersion>2</ApplicationVersion>
+	  <ApplicationTitle>MacPConversionsMauiClient</ApplicationTitle>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0-maccatalyst|AnyCPU'">
+	  <ApplicationId>com.macpgames.macpconversionsmauiclient</ApplicationId>
+	  <ApplicationDisplayVersion>2.0.0</ApplicationDisplayVersion>
+	  <ApplicationVersion>2</ApplicationVersion>
+	  <ApplicationTitle>MacPConversionsMauiClient</ApplicationTitle>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0-windows10.0.19041.0|AnyCPU'">
+	  <ApplicationId>com.macpgames.macpconversionsmauiclient</ApplicationId>
+	  <ApplicationDisplayVersion>2.0.0</ApplicationDisplayVersion>
+	  <ApplicationVersion>2</ApplicationVersion>
+	  <ApplicationTitle>MacPConversionsMauiClient</ApplicationTitle>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net6.0-android|AnyCPU'">
+	  <ApplicationId>com.macpgames.macpconversionsmauiclient</ApplicationId>
+	  <ApplicationDisplayVersion>2.0.0</ApplicationDisplayVersion>
+	  <ApplicationVersion>2</ApplicationVersion>
+	  <ApplicationTitle>MacPConversionsMauiClient</ApplicationTitle>
+	  <AndroidKeyStore>True</AndroidKeyStore>
+	  <AndroidSigningStorePass>Jessica19681208</AndroidSigningStorePass>
+	  <AndroidSigningKeyAlias>macpgames</AndroidSigningKeyAlias>
+	  <AndroidSigningKeyPass>Jessica19681208</AndroidSigningKeyPass>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net6.0-ios|AnyCPU'">
+	  <ApplicationId>com.macpgames.macpconversionsmauiclient</ApplicationId>
+	  <ApplicationDisplayVersion>2.0.0</ApplicationDisplayVersion>
+	  <ApplicationVersion>2</ApplicationVersion>
+	  <ApplicationTitle>MacPConversionsMauiClient</ApplicationTitle>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net6.0-maccatalyst|AnyCPU'">
+	  <ApplicationId>com.macpgames.macpconversionsmauiclient</ApplicationId>
+	  <ApplicationDisplayVersion>2.0.0</ApplicationDisplayVersion>
+	  <ApplicationVersion>2</ApplicationVersion>
+	  <ApplicationTitle>MacPConversionsMauiClient</ApplicationTitle>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net6.0-windows10.0.19041.0|AnyCPU'">
+	  <ApplicationId>com.macpgames.macpconversionsmauiclient</ApplicationId>
+	  <ApplicationDisplayVersion>2.0.0</ApplicationDisplayVersion>
+	  <ApplicationVersion>2</ApplicationVersion>
+	  <ApplicationTitle>MacPConversionsMauiClient</ApplicationTitle>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -54,6 +120,12 @@
 
 	<ItemGroup>
 	  <Folder Include="Resources\Images\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="UnitConversionsPage.xaml.cs">
+	    <DependentUpon>UnitConversionsPage.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 </Project>

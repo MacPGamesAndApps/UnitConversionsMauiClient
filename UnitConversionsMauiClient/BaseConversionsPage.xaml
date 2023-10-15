@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UnitConversionsMauiClient.BaseConversionsPage" StyleClass="BaseConversions">
+    
+    <ScrollView>
+        <Frame BorderColor="ForestGreen" Padding="0" Margin="30" BackgroundColor="#00000000">
+            <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+                <Label
+                Text="Value to convert:"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="18"
+                FontAutoScalingEnabled="True"
+                HorizontalOptions="Center" 
+                Margin="0,0,0,-20" />
+
+                <Entry
+                x:Name="ValueToConvert"
+                Text=""
+                Placeholder="Enter a number"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="18"
+                FontAutoScalingEnabled="True"
+                HorizontalTextAlignment="Center"
+                HorizontalOptions="Center">
+                </Entry>
+
+                <Picker
+                x:Name="ConversionType"
+                Title="Select base conversion type"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="18"
+                FontAutoScalingEnabled="True"
+                HorizontalTextAlignment="Center"
+                HorizontalOptions="Center" 
+                Margin="0,0,0,20" />
+
+                <Button
+                x:Name="ConvertBtn"
+                Text="Convert"
+                Clicked="OnConvertClicked"
+                FontAutoScalingEnabled="True"
+                HorizontalOptions="Center" 
+                Margin="0,0,0,20" />
+
+                <Label
+                Text="Converted value:"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="18"
+                FontAutoScalingEnabled="True"
+                HorizontalOptions="Center" 
+                Margin="0,0,0,-20" />
+
+                <Entry
+                x:Name="ConvertedValue"
+                Text="" 
+                IsReadOnly="True"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="18"
+                FontAutoScalingEnabled="True"
+                HorizontalOptions="Center">
+                </Entry>
+
+                <Button
+                x:Name="NavigationBtn"
+                Text="Go to Unit Conversions"
+                Clicked="OnNavigationClicked"
+                FontAutoScalingEnabled="True"
+                HorizontalOptions="End" 
+                StyleClass="NavigationButton"
+                Margin="0,0,0,20" >
+                    <Button.Background>
+                        <LinearGradientBrush  EndPoint="1,0">
+                            <GradientStop Color="PaleTurquoise" Offset="0.1" />
+                            <GradientStop Color="SeaShell" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+
+            </VerticalStackLayout>
+        </Frame>
+    </ScrollView>
+
+</ContentPage>

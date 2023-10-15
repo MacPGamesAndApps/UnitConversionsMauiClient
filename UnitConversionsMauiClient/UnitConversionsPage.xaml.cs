@@ -6,12 +6,12 @@ using UnitConversionsMauiClient.Utils;
 
 namespace UnitConversionsMauiClient;
 
-public partial class MainPage : ContentPage
+public partial class UnitConversionsPage : ContentPage
 {
-	public MainPage()
+	public UnitConversionsPage()
 	{
 		InitializeComponent();
-		this.ConversionType.ItemsSource = GetConversionTypes();
+		this.ConversionType.ItemsSource = Helpers.GetConversionTypes(FeatureFlags.UnitConversions);
 	}
 
 	private void OnConvertClicked(object sender, EventArgs e)
@@ -29,7 +29,7 @@ public partial class MainPage : ContentPage
                 string postContent = JsonConvert.SerializeObject(conversionData);
                 StringContent stringContent = new StringContent(postContent, Encoding.UTF8, "application/json");
                 stringContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
-                HttpResponseMessage httpResponseMessage = httpClient.PostAsync(Helpers.GetEndpointRootUrl() + "api/unitconversions/convert", stringContent).Result;
+                HttpResponseMessage httpResponseMessage = httpClient.PostAsync(Helpers.GetEndpointRootUrl(FeatureFlags.UnitConversions) + "convert", stringContent).Result;
                 double responseValue = 0;
                 if (Double.TryParse(httpResponseMessage.Content.ReadAsStringAsync().Result, out responseValue))
                 {
@@ -49,24 +49,10 @@ public partial class MainPage : ContentPage
         this.ConvertedValue.Text = results;
     }
 
-    private static List<string> GetConversionTypes()
+    private async void OnNavigationClicked(object sender, EventArgs e)
     {
-        List<string> conversionTypeList = new List<string>();
-
-        string conversionTypeListJason = string.Empty;
-
-        using (HttpClient httpClient = new HttpClient())
-        {
-            HttpResponseMessage httpResponseMessage = httpClient.GetAsync(Helpers.GetEndpointRootUrl() + "api/unitconversions/gettypes").Result;
-            conversionTypeListJason = httpResponseMessage.Content.ReadAsStringAsync().Result;
-        }
-
-        conversionTypeList = JsonConvert.DeserializeObject<List<ConversionTypeInfo>>(conversionTypeListJason)
-            .OrderBy(ctl => ctl.ConversionType)
-            .Select(ctl => ctl.ConversionName)
-            .ToList<string>();
-
-        return conversionTypeList;
+        await Shell.Current.GoToAsync("//BaseConversionsPage");
     }
+
 }
 
